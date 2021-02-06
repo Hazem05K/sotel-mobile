@@ -1,17 +1,39 @@
-<ion-header [translucent]="true">
+<!-- <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-icon name="back" class="ion-padding-horizontal" slot="start" (click)="goback()"></ion-icon>
+    <ion-title>Mes Infos</ion-title>
   </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+</ion-header> -->
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-content danger>
+ 
+  
+  <ion-list class="ion-padding ion-margin" style="margin-bottom: 5vh">
+    <ion-item routerLink="/edit-profile">
+      <ion-label class="ion-text-wrap">
+      Modifier profil
+      </ion-label>
+      <ion-icon item-end name="arrow-forward" class="icon"></ion-icon>
+    </ion-item>
+    <!-- <ion-item routerLink="/params">
+      <ion-label class="ion-text-wrap">
+        Mon Entreprise
+      </ion-label>
+      <ion-icon item-end name="arrow-forward" class="icon"></ion-icon>
+    </ion-item> -->
+    <!-- <ion-item lines="none" routerLink="/edit-pass-word">
+      <ion-label class="ion-text-wrap">
+      Modifier mot de passe
+      </ion-label>
+      <ion-icon item-end name="arrow-forward" class="icon"></ion-icon>
+    </ion-item> -->
+    <ion-item (click)="logOut()" lines="none" class="out">
+      <ion-label class="ion-text-wrap">
+        Déconnexion
+      </ion-label>
+      <ion-icon item-end name="log-out" class="icon"></ion-icon>
+    </ion-item>
+  </ion-list>
 </ion-content>
+   
