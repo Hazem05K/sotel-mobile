@@ -1,0 +1,39 @@
+
+ion-segment-button {
+    font-size: medium;
+    --indicator-color: transparent !important;
+    --indicator-color-checked: transparent !important;
+    font-size:large;
+    text-transform: none;
+  }
+  
+  ion-grid{
+      padding: 5%;
+  }
+  ion-input {
+    --padding-start:0px;
+}
+
+ion-segment{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.btn{
+    border-radius: 8px;
+  background: var(--ion-color-primary,#131d55) ;
+  padding: 2vh;
+  font-size: 12px;
+  line-height: 1;
+  color: white;
+  margin: 10%;
+  text-align: center;
+  
+
+}
+.fb{
+    background: #4267B2;
+    ion-icon{
+        // padding-top: 5%;
+    }
+}

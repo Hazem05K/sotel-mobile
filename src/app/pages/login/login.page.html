@@ -1,0 +1,36 @@
+<ion-content>
+  <div class="banner">
+    <img src="../../../assets/logo.png" alt="" srcset="">
+  </div>
+ <ion-grid class="loginform">
+   <ion-row class="ion-margin">
+     <ion-col size="12">
+       <ion-item>
+         <ion-label position="floating">User Name</ion-label>
+         <ion-input [(ngModel)]="loginForm.username" type="text" id="mail"></ion-input>
+       </ion-item>
+     </ion-col>
+   </ion-row>
+   <ion-row class="ion-margin">
+     <ion-col size="12">
+      <ion-item>
+        <ion-label position="floating">Mot de passe</ion-label>
+        <ion-input [(ngModel)]="loginForm.password" type="password" id="password"></ion-input>
+      </ion-item>
+     </ion-col>
+   </ion-row>
+   <ion-row class="ion-margin"> 
+     <ion-col (click)="doLogin()" size="4">
+       <ion-text color="primary">
+        Login
+       </ion-text>
+     </ion-col>
+     <ion-col size="4" offset="4">
+       <ion-button (click)="doLogin()">
+         <ion-icon slot="icon-only" name="arrow-forward-outline"></ion-icon>
+       </ion-button>
+     </ion-col>
+   </ion-row>
+ </ion-grid>
+
+</ion-content>

@@ -1,0 +1,168 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Paramètres
+      </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<!-- Scrollable Segment -->
+<div class="nav-pills">
+  <div class="nav-item active" [ngClass]="{active: index==0}" (click)="goTo(0)">
+    <ion-icon name="aperture-outline"></ion-icon>
+    <ion-text>
+      Configuration
+    </ion-text>
+  </div>
+  <div class="nav-item" [ngClass]="{active: index==1}" (click)="goTo(1)">
+    <ion-icon name="bookmarks-outline"></ion-icon>
+    <ion-text>
+      Activité & Taxe
+    </ion-text>
+  </div>
+  <div class="nav-item" [ngClass]="{active: index==2}" (click)="goTo(2)">
+    <ion-icon name="map-outline"></ion-icon> 
+    <ion-text>
+      Adresse
+    </ion-text>
+  </div>
+  <div class="nav-item" [ngClass]="{active: index==3}" (click)="goTo(3)">
+    <ion-icon name="cash-outline"></ion-icon>
+    <ion-text>
+      Banque
+    </ion-text>
+  </div>
+</div>
+<ion-grid class="ion-padding  ion-margin-vertical">
+  <ion-row>
+    <ion-col size="4" offset="4">
+      <div class="img-holder ion-padding-horizontal">
+        <img class="img" src="../../assets/blank.gif"   (click)="changePic()">
+    </div>
+      <!-- <img class="img" *ngIf="!user.picture" alt="profile" src="../../assets/user.png" (click)="changePic()"> -->
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<ion-slides #slides (ionSlideTransitionStart)="slideChange($event)">
+  <ion-slide>
+      <ion-grid>  
+      <ion-row>
+        <ion-item>
+          <ion-label position="floating">NOM DE VOTRE ENTREPRISE (*)</ion-label>
+          <ion-input  type="text"></ion-input>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-item>
+          <ion-label position="floating">TÉLÉPHONE</ion-label>
+          <ion-input  type="text"></ion-input>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-item>
+          <ion-label position="floating">SITE WEB</ion-label>
+          <ion-input  type="text"></ion-input>
+        </ion-item>
+      </ion-row>
+    </ion-grid>
+  </ion-slide>
+  <ion-slide>
+    <ion-grid fixed>
+      <ion-row>
+        <ion-item>
+          <ion-label position="floating">ACTIVITÉ</ion-label>
+          <ion-input  type="text"></ion-input>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-item>
+          <ion-label position="floating">MATRICULE FISCAL</ion-label>
+          <ion-input  type="text"></ion-input>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">EXERCICE</ion-label>
+            <ion-input  type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>   
+          <ion-item>
+            <ion-label position="floating">DEVISE PRINCIPALE</ion-label>
+            <ion-input  type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-slide>
+  <ion-slide>
+    <ion-grid fixed>
+      <ion-row>
+        <ion-item>
+          <ion-label position="floating">ADRESSE</ion-label>
+          <ion-input  type="text"></ion-input>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-col >
+          <ion-item>
+            <ion-label position="floating">GOUVERNORAT</ion-label>
+            <ion-input  type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col >
+          <ion-item>
+            <ion-label position="floating">CODE POSTAL</ion-label>
+            <ion-input  type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-item>
+          <ion-label position="floating">PAYS</ion-label>
+          <ion-input  type="text"></ion-input>
+        </ion-item>
+      </ion-row>
+    </ion-grid>
+  </ion-slide>
+  <ion-slide>
+    <ion-grid fixed>
+      <ion-row>
+        <ion-item>
+          <ion-label position="floating">BANQUE</ion-label>
+          <ion-input  type="text"></ion-input>
+        </ion-item>
+   
+        <ion-item>
+          <ion-label position="floating">BIC/SWIFT</ion-label>
+          <ion-input  type="text"></ion-input>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-item>
+          <ion-label position="floating">R.I.B.</ion-label>
+          <ion-input  type="text"></ion-input>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">IBAN</ion-label>
+            <ion-input  type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-slide>
+</ion-slides>
+
+<div class="btn" (click)="onClick()" tappable>
+
+    Valider
+  
+</div>
+</ion-content>

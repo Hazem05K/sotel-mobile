@@ -1,0 +1,61 @@
+<ion-icon [routerLink]="['/tabs/tab3']" routerLinkActive="router-link-active"  class="ion-padding-horizontal" class="back" slot="start" name="arrow-back"></ion-icon>
+<ion-content >
+  <ion-slides [pager]='true' *ngIf="!event">
+
+    <ion-slide>
+      <div class="img-holder ion-padding-horizontal">
+        <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+      </div>
+    </ion-slide>
+  </ion-slides>
+  <ion-slides [pager]='true' *ngIf="event">
+
+    <ion-slide>
+      <div class="img-holder ion-padding-horizontal">
+<img class="img" src="../../assets/blank.gif" [style.backgroundImage]="'url(' +urlPicture+ event.banner +')'">
+      </div>
+    </ion-slide>
+  </ion-slides>
+  <ion-row *ngIf="event" class="header">
+    <ion-col size="8" class="title black">{{event.title}}
+     </ion-col>
+    <ion-col size="4" class="price bold">{{ event.time | date :  "dd-MM" }} <br>{{ event.time | date :  "HH:mm" }}</ion-col>
+  </ion-row>
+ 
+  <ion-card *ngIf="event">
+      <ion-card-header>
+      Description
+      </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12">
+            {{event.descreption}}
+          </ion-col>
+         
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+
+  
+    <ion-card *ngIf="medias?.length == 0 && !event">
+      <ion-card-header>
+        Description
+      </ion-card-header>
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="12">
+            <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+            </ion-col>
+
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+ 
+</ion-content>

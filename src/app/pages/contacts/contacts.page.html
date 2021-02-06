@@ -1,0 +1,86 @@
+<ion-header color="primary">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back-outline" [routerLink]="['/tabs']"></ion-icon>
+     </ion-buttons>
+    <ion-title style="padding-right: 0px;">Synthèse des Contacts</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="addContact()" color="secondary">
+        <ion-icon name="add-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-searchbar placeholder="Nom d'affichage"></ion-searchbar>
+  <ion-grid fixed>
+    <ion-row class="custom-card">  
+      <ion-col size="12" (click)="showAction()">
+        <div>
+         <span class="title">Nom affichage</span>
+        </div>
+        <div>
+           <ion-badge color="success">Active</ion-badge>
+        </div>
+      </ion-col>
+      <ion-col size="12" class="second" (click)="showAction()">
+        <div>
+          Entreprise
+          
+        </div>
+        <div>
+          manager@yahoo.fr
+        </div>
+      </ion-col>
+      <ion-col size="12" class="ion-no-padding">
+        <div>
+          <ion-button (click)="onClick()" expand="block" fill="clear" color="secondary">
+            <ion-icon slot="start" name="create-outline"></ion-icon>
+            Edit
+          </ion-button>
+        </div>
+        <div>
+          <ion-button (click)="onClick()" expand="block" fill="clear" color="danger">
+            <ion-icon slot="start" name="trash-outline"></ion-icon>
+            Delete
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="custom-card">  
+      <ion-col size="12">
+        <div>
+         <span class="title">Nom affichage</span>
+        </div>
+        <div>
+           <ion-badge color="success">Active</ion-badge>
+        </div>
+      </ion-col>
+      <ion-col size="12" class="second">
+        <div>
+          Entreprise
+          
+        </div>
+        <div>
+          manager@yahoo.fr
+        </div>
+      </ion-col>
+      <ion-col size="12" class="ion-no-padding">
+        <div>
+          <ion-button (click)="onClick()" expand="block" fill="clear" color="secondary">
+            <ion-icon slot="start" name="create-outline"></ion-icon>
+            Edit
+          </ion-button>
+        </div>
+        <div>
+          <ion-button (click)="onClick()" expand="block" fill="clear" color="danger">
+            <ion-icon slot="start" name="trash-outline"></ion-icon>
+            Delete
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  
+  </ion-grid>
+
+</ion-content>

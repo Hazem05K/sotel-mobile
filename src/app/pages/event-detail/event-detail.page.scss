@@ -1,0 +1,195 @@
+.back{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    padding: 1%;
+    background-color: rgba(128, 128, 128, 0.281);
+    border-radius:100% ;
+    z-index: 2;
+}
+
+
+ion-slide{
+    padding: 3%;
+    img{
+        border-radius: 10%;
+        -webkit-box-shadow: 0px 0px 37px -7px rgba(0,0,0,0.38);
+        -moz-box-shadow: 0px 0px 37px -7px rgba(0,0,0,0.38);
+        box-shadow: 0px 0px 37px -7px rgba(0,0,0,0.38);
+    }
+}
+ion-card{
+    webkit-box-shadow: 0px 0px 37px -7px rgba(0,0,0,0.05);
+        -moz-box-shadow: 0px 0px 37px -7px rgba(0,0,0,0.05);
+        box-shadow: 0px 0px 37px -7px rgba(0,0,0,0.05);
+}
+.map_holder {
+    width: 100%;
+    height: 40vh;
+    -webkit-overflow-scrolling: inherit !important;
+
+  }
+  .label{
+    margin-top:10%
+}
+.btn{
+    border-radius: 25px;
+  background: rgba(180, 180, 180, 0.411);
+  padding: 2vh;
+  font-size: 12px;
+  line-height: 1;
+  color: rgb(110, 110, 110);
+  margin: 2%;
+  margin-bottom: 0% !important;
+  
+
+}
+.comment-box{
+    margin: 0.3vh;
+    padding: 0.4vh;
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.14);
+-moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.14);
+box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.14);
+border-radius: 3px;
+}
+.img {
+    border-radius: 4% !important;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+ 
+   
+  }
+  .img-holder{
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    width: 100%;
+    height: 40vh;
+
+  }
+.active{
+  margin-right: 0.7vh;
+  color: #4DB7FE !important;
+    font-size: 2vh;
+    padding-bottom: 01vh;
+
+}
+.maploc{
+  position: absolute;
+  top: 1.5vh;
+  right: 4vh;
+  z-index: 800;
+  font-size: 3.5vh;
+  padding: 3px;
+  padding-right: 7px;
+  padding-left: 7px;
+  background: white;
+  color: cornflowerblue;
+  border-radius: 3px;
+  width: 40px;
+  height: 40px;
+}
+.maploc2{
+  position: absolute;
+  top: 1vh;
+  right: 4vh;
+  z-index: 800;
+  font-size: 3.5vh;
+  padding: 3px;
+  padding-right: 7px;
+  padding-left: 7px;
+  background: white;
+  color: cornflowerblue;
+  border-radius: 3px;
+}
+.plus{
+  background-color: rgb(77, 183, 254);
+  color: white;
+  padding: 1vh;
+  font-size: 12px;
+  text-align: center;
+}
+ion-card-content {
+  margin-top: 0.5vh !important;
+  padding-bottom: 0 !important ;
+  margin-bottom: 0.5vh !important;
+}
+
+ion-card-header {
+  padding-bottom: 0.6vh !important;
+  margin-inline-start: 2vh !important;
+}
+
+.activity-box{
+  padding: 1.5vh;
+  margin-top:1.8vh;
+  border-radius: 25px;
+  -webkit-box-shadow: 0px 3px 45px -34px rgba(0,0,0,0.53);
+-moz-box-shadow: 0px 3px 45px -34px rgba(0,0,0,0.53);
+box-shadow: 0px 3px 45px -34px rgba(0,0,0,0.53);
+.title{
+  font-size:4vw;
+  color: #2F3B59;
+}
+.info{
+  font-size: 3vw !important;
+  color:#4DB7FE;
+}
+.divi{
+  border-top: 0.6vh dotted #4DB7FE;
+  width: 60% !important;
+}
+.desc{
+  font-size: 3.3vw !important;
+}
+span{
+  display: inline-block;
+  margin-left: 2vh;
+  font-size: 3.2vw !important;
+
+  color:#4DB7FE;
+
+}
+}
+.active{
+  margin-right: 0.7vh;
+}
+.maploc{
+  position: absolute;
+  top: 1.5vh;
+  right: 4vh;
+  z-index: 800;
+  font-size: 3.5vh;
+  padding: 3px;
+  padding-right: 7px;
+  padding-left: 7px;
+  background: white;
+  color: cornflowerblue;
+  border-radius: 3px;
+}
+
+.acc{
+  span{
+    margin: 0px !important;
+  }
+}
+
+.flat-button {
+        position: fixed;
+    bottom: 8px;
+    width: 80%;
+left: 10%;
+}
+.header{
+    top: 2vh;
+    padding: 4vh;
+    padding-bottom: 0vh;
+}
+.title{
+
+}
+.price{
+    text-align: right;
+    color:  var(--ion-color-tertiary);
+}

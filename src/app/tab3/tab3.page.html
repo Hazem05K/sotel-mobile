@@ -1,17 +1,66 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-grid class="header">
+    <ion-row>
+      <ion-col size="6">
+        <div class="image">
+          <img src="../../assets/blank.gif" alt="">
+        </div>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button (click)="quickAdd()" expand="block" fill="clear" color="secondary">
+          New post
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-slides class="widget-slides" mode="ios" pager="ios" [options]="ios">
+    <ion-slide *ngFor="let event of events">
+      <div class="sub-ui">
+      </div>
+      <ion-card routerLink="/event-detail/{{event.id}}">
+        <ion-card-header>
+          <ion-card-subtitle> {{ event.time | date :  "dd-MM" }} - {{ event.time | date :  "HH:mm" }}</ion-card-subtitle>
+          <ion-card-title>{{event.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{event.descreption}}
+        </ion-card-content>
+      </ion-card>
+      <div class="sou-ui">
+        
+      </div>
+    </ion-slide>
+  </ion-slides>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+
+
+<ion-card class="post-card" *ngFor="let post of posts">
+  <!-- <div class="likes">
+    <div class="icon">
+      <ion-icon  name="heart"></ion-icon>
+    </div>
+    <div class="count">
+      0
+    </div>
+  </div> -->
+          <!-- <img src="https://ionicframework.com/docs/demos/api/card/madison.jpg" /> -->
+
+  <ion-card-header>
+    <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+    
+  </ion-card-header>
+  <ion-item lines="none">
+    <ion-avatar slot="start">
+  <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+</ion-avatar>
+    <ion-card-title>{{post.title}}</ion-card-title>
+
+    <ion-button fill="outline" slot="end">{{post.created_at}}</ion-button>
+  </ion-item>
+
+  <ion-card-content>
+   {{post.body}}
+  </ion-card-content>
+</ion-card>
+
 </ion-content>

@@ -1,0 +1,104 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back-outline" [routerLink]="['/tabs']"></ion-icon>
+     </ion-buttons>
+    <ion-title>Modifier mon profil
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid fixed id="sign-up">
+    <form  class="userInformatio">
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none">
+          <ion-checkbox slot="start" (click)="choseGender(1)"  ></ion-checkbox>
+          <ion-label>Madame</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item lines="none">
+          <ion-checkbox slot="start" (click)="choseGender(2)" ></ion-checkbox>
+          <ion-label >Monsieur</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" class="ion-text-start label">
+        <ion-item class="ion-no-padding">
+          <ion-label position="floating">Prénom*</ion-label>
+          <ion-input type="text" placeholder="Prénom"  name="first_name"  value=""></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" class="ion-text-start label">
+        <ion-item class="ion-no-padding">
+          <ion-label position="floating">Nom*</ion-label>
+          <ion-input type="text" placeholder="Nom" value=""  name="last_name" ></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" class="ion-text-start label">
+        <ion-item class="ion-no-padding">
+          <ion-label position="floating">Adresse e-mail*</ion-label>
+          <ion-input type="text" placeholder="Adresse e-mail" value=""  name="email"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" class="ion-text-start label">
+        <ion-item class="ion-no-padding">
+          <ion-label position="floating">N° Téléphone </ion-label>
+          <ion-input  type="number" placeholder="XX XX XX XX XX " value=""  name="phone" ></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col size="12" class="ion-text-start label">
+          <ion-item class="ion-no-padding">
+            <ion-label position="floating">Ville actuelle </ion-label>
+            <ion-input  type="number" placeholder="Ville actuelle " value=""  name="phone" ></ion-input>
+          </ion-item>
+        </ion-col>
+      <!-- <ion-row>
+        <ion-col size="10" >
+          <ion-searchbar value=""  name="address" (ionChange)="updateSearchResults()" placeholder="Quelle ville ?" (ionCancel)="emptyPlaces()" showCancelButton="focus" cancelButtonIcon="refresh"></ion-searchbar>
+            <ion-list *ngIf="isPlaceAvailable">
+            <ion-item  *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
+             
+            </ion-item>
+            </ion-list>
+        </ion-col>
+        <ion-col size="1" class="ion-text-center" >
+          <ion-icon  name="locate" class="loc ion-padding-vertical" (click)="getMyLocation()"></ion-icon>
+        </ion-col>
+    
+      </ion-row> -->
+    </ion-row>
+    <ion-row>
+      <ion-input type="number"  hidden  name="lat" placeholder="Awesome Input"></ion-input>
+      <ion-input type="number"  hidden  name="long" placeholder="Awesome Input"></ion-input>
+    </ion-row>
+    <!-- <ion-row>
+      <ion-col size="12" class="ion-text-start label">
+        <ion-label>A propos de vous</ion-label>
+        <ion-item class="ion-no-padding">
+          <ion-textarea></ion-textarea>
+        </ion-item>
+      </ion-col>
+    </ion-row> -->
+    
+    <ion-row class="label">
+      <ion-col size="8" offset="2" tappable >
+        <div class="btn" (click)="updateUser()" tappable>
+          Enregistrer
+        </div>
+      </ion-col>
+    </ion-row>
+  </form>
+  </ion-grid>
+</ion-content>
