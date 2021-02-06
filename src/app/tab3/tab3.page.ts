@@ -25,7 +25,6 @@ export class Tab3Page {
   }
 
   handleLoadEvent() {
-
     this.api.get('event').toPromise().then((res) => {
         this.events = res        
     });
